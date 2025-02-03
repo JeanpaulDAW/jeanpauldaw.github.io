@@ -42,19 +42,19 @@
       <form method="get" action="./pagina5.html">
         <div class="input-group mb-3">
           <span class="input-group-text">Número de tarjeta(16 números)</span>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" name="card_number" pattern="\d{16}" />
         </div>
         <!--otro grupo-->
         <div class="input-group mb-3">
           <span class="input-group-text">Caducidad (mm/yy)</span>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" pattern="(0[1-9]|1[0-2])\/\d{2}" />
           <span class="input-group-text">Código de seguridad</span>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" pattern="\d{3,4}" />
         </div>
 
         <div class="input-group mb-3">
           <span class="input-group-text">Titular de la tarjeta</span>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,40}" />
         </div>
 
         <br /><br />
