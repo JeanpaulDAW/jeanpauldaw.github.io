@@ -13,7 +13,6 @@ body {
   background: linear-gradient(to right, orange, yellow);
   color: black;
   text-align: center;
-  padding: 5px;
   position: fixed;
   bottom: 0;
   width: 100%;
