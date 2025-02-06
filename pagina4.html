@@ -38,25 +38,51 @@
     </ul>
 
     <div class="container pt-2">
-      <h2>Datos de pago</h2>
-      <form method="get" action="./pagina5.html">
-        <div class="input-group mb-3">
-          <span class="input-group-text">Número de tarjeta(16 números)</span>
-          <input type="text" class="form-control" name="card_number" pattern="\d{16}" />
+      <h2>Métodos de pago</h2>
+      <button type="button" class="btn-info" data-bs-toggle="collapse"
+        data-bs-target="#pagotarjeta">Tarjeta de crédito</button>
+        <div id="pagotarjeta" class="collapse">
+          <form method="get" action="pagina5.html">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Número de tarjeta(16 números)</span>
+              <input type="text" class="form-control" required pattern="[0-9]{16}" />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Caducidad (mm/yy)</span>
+              <input type="text" class="form-control" required pattern="^(0[1-9]|1[0-2])\/\d{2}$"/>
+              <span class="input-group-text">Código de seguridad</span>
+              <input type="text" class="form-control" required pattern="[0-9]{3}" />
+            </div>
+    
+            <div class="input-group mb-3">
+              <span class="input-group-text">Titular de la tarjeta</span>
+              <input type="text" class="form-control"  required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,20}" />
+            </div>    
         </div>
-        <!--otro grupo-->
-        <div class="input-group mb-3">
-          <span class="input-group-text">Caducidad (mm/yy)</span>
-          <input type="text" class="form-control" pattern="(0[1-9]|1[0-2])\/\d{2}" />
-          <span class="input-group-text">Código de seguridad</span>
-          <input type="text" class="form-control" pattern="\d{3,4}" />
+        <img src="./images/visa.png" width="90" />
+        
+        <br><br>
+        <button type="button" class="btn btn-info" data-bs-toggle="collapse"
+        data-bs-target="#pagobizum">Bizum</button>
+        <div id="pagobizum" class="collapse">
+          <form method="get" action="pagina5.html">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Número de teléfono(9 números)</span>
+              <input type="text" class="form-control"  required pattern="[0-9]{9}"/>
+            </div>
         </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Titular de la tarjeta</span>
-          <input type="text" class="form-control" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,40}" />
+        <img src="./images/bizum.png" width="50" />
+        <br><br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse"
+        data-bs-target="#pagopaypal">PayPal</button>
+        <div id="pagopaypal" class="collapse">
+          <form method="get" action="pagina5.html">
+            <div class="input-group mb-3">
+              <span class="input-group-text">Correo electrónico</span>
+              <input type="email" class="form-control" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
+            </div>
         </div>
-
+        <img src="./images/paypal.png" width="50" />
         <br /><br />
         <button type="submit" class="btn btn-warning">Siguiente</button>
       </form>
@@ -69,4 +95,5 @@
     <br />
     <img src="./images/symbol.png" width="50" />
   </footer>
+</html>
 </html>
