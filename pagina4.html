@@ -45,18 +45,18 @@
           <form method="get" action="pagina5.html">
             <div class="input-group mb-3">
               <span class="input-group-text">Número de tarjeta(16 números)</span>
-              <input type="text" class="form-control" required pattern="[0-9]{16}" />
+              <input type="text" class="form-control"  pattern="[0-9]{16}" />
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">Caducidad (mm/yy)</span>
-              <input type="text" class="form-control" required pattern="^(0[1-9]|1[0-2])\/\d{2}$"/>
+              <input type="text" class="form-control"  pattern="^(0[1-9]|1[0-2])\/\d{2}$"/>
               <span class="input-group-text">Código de seguridad</span>
-              <input type="text" class="form-control" required pattern="[0-9]{3}" />
+              <input type="text" class="form-control"  pattern="[0-9]{3}" />
             </div>
     
             <div class="input-group mb-3">
               <span class="input-group-text">Titular de la tarjeta</span>
-              <input type="text" class="form-control"  required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,20}" />
+              <input type="text" class="form-control"   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,20}" />
             </div>    
         </div>
         <img src="./images/visa.png" width="90" />
@@ -68,7 +68,7 @@
           <form method="get" action="pagina5.html">
             <div class="input-group mb-3">
               <span class="input-group-text">Número de teléfono(9 números)</span>
-              <input type="text" class="form-control"  required pattern="[0-9]{9}"/>
+              <input type="text" class="form-control"   pattern="[0-9]{9}"/>
             </div>
         </div>
         <img src="./images/bizum.png" width="50" />
@@ -79,7 +79,7 @@
           <form method="get" action="pagina5.html">
             <div class="input-group mb-3">
               <span class="input-group-text">Correo electrónico</span>
-              <input type="email" class="form-control" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
+              <input type="email" class="form-control"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
             </div>
         </div>
         <img src="./images/paypal.png" width="50" />
